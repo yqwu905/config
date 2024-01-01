@@ -1,0 +1,16 @@
+{
+"choice" : [
+    {
+        "label" : "ssh://root:root@172.168.1.1:22",
+        "id": "1",
+    },
+],
+
+"data" : [
+    {
+        "protocol" : "ssh",
+        "username": "root",
+        "passwd": "root"
+    }
+]
+}

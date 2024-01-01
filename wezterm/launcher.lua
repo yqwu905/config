@@ -1,0 +1,3 @@
+local launcher = {}
+
+return launcher

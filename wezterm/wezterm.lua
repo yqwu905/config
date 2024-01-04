@@ -35,7 +35,7 @@ local config = {
 
 	window_close_confirmation = "NeverPrompt",
 	color_scheme = "tokyonight_moon",
-	font = wezterm.font("JetBrainsMono Nerd Font Mono"),
+	font = wezterm.font("JetBrainsMono NFM"),
 	window_background_opacity = 1.0,
 	inactive_pane_hsb = {
 		saturation = 0.85,

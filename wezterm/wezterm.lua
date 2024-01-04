@@ -23,7 +23,7 @@ local config = {
 	},
 	default_domain = "WSL:Arch",
 
-	window_decorations = "NONE", -- 关闭标题栏
+	window_decorations = "RESIZE", -- 关闭标题栏
 
 	launch_menu = launcher,
 

@@ -57,12 +57,12 @@ local config = {
 			action = act.SpawnTab("CurrentPaneDomain"),
 		},
 		{ -- 左移tab
-			key = "LeftArrow",
+			key = "Q",
 			mods = mod,
 			action = act.MoveTabRelative(-1),
 		},
 		{ -- 右移tab
-			key = "RightArrow",
+			key = "E",
 			mods = mod,
 			action = act.MoveTabRelative(1),
 		},

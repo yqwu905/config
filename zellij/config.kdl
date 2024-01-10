@@ -104,11 +104,10 @@ scroll_buffer_size 10000
 
 
 keybinds clear-defaults=true {
-    unbind "Ctrl s"
-    unbind "Ctrl o"
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        bind "Ctrl s" { SwitchToMode "session"; }
         bind "Ctrl f" { SwitchToMode "search"; }
     }
     locked {
@@ -217,10 +216,9 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
-        bind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "d" { Detach; }
-        bind "w" {
+        bind "s" {
             LaunchOrFocusPlugin "zellij:session-manager" {
                 floating true
                 move_to_focused_tab true
@@ -255,10 +253,6 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Detach; }
         bind "Alt n" { NewPane; }
-        bind "H" { MoveFocusOrTab "Left"; }
-        bind "L" { MoveFocusOrTab "Right"; }
-        bind "J" { MoveFocus "Down"; }
-        bind "K" { MoveFocus "Up"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -277,7 +271,7 @@ keybinds clear-defaults=true {
         bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl o" { SwitchToMode "Session"; }
+        bind "Ctrl s" { SwitchToMode "Session"; }
     }
 }
 

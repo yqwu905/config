@@ -1,0 +1,8 @@
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono NFM"
+
+[shell]
+program = "wsl"

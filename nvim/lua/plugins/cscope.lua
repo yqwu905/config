@@ -5,7 +5,8 @@ return {
         "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
         "nvim-tree/nvim-web-devicons", -- optional [for devicons in telescope or fzf]
     },
-    -- cmd = { "Cscope" },
+    keys = { "<C-c>" },
+    cmd = { "Cscope" },
     init = function()
         vim.api.nvim_create_user_command("CscopeBuild", function()
             pcall(function()

@@ -107,7 +107,7 @@ keybinds clear-defaults=true {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
-        bind "Ctrl s" { SwitchToMode "session"; }
+        bind "Ctrl S" { SwitchToMode "session"; }
         bind "Ctrl f" { SwitchToMode "search"; }
     }
     locked {
@@ -216,7 +216,7 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl S" { SwitchToMode "Normal"; }
         bind "d" { Detach; }
         bind "s" {
             LaunchOrFocusPlugin "zellij:session-manager" {
@@ -271,7 +271,7 @@ keybinds clear-defaults=true {
         bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl s" { SwitchToMode "Session"; }
+        bind "Ctrl S" { SwitchToMode "Session"; }
     }
 }
 

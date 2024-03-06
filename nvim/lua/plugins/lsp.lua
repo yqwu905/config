@@ -18,11 +18,32 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
+        init = function()
+            local keys = require("lazyvim.plugins.lsp.keymaps").get()
+            keys[#keys + 1] = { "gd", "<cmd>Glance definitions<cr>" }
+            keys[#keys + 1] = { "gD", "<cmd>lua vim.lsp.buf.definition()<cr>" }
+            keys[#keys + 1] = { "gh", "<cmd>Glance references<cr>" }
+            keys[#keys + 1] = { "ci", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>" }
+        end,
         opts = {
             inlay_hints = {
                 enabled = true,
             },
             servers = {
+                clangd = {
+                    single_file_support = false,
+                    root_dir = require("lspconfig.util").root_pattern("compile_commands.json", ".clangd"),
+                    cmd = {
+                        "clangd",
+                        "--background-index",
+                        "--clang-tidy",
+                        "--header-insertion=iwyu",
+                        "--completion-style=detailed",
+                        "--function-arg-placeholders",
+                        "--fallback-style=llvm",
+                        "--header-insertion=never",
+                    },
+                },
                 bashls = {},
             },
         },

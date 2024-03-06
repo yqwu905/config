@@ -19,4 +19,10 @@ return {
             require("better_escape").setup()
         end,
     },
+
+    -- Paste image
+    {
+        "yqwu905/clipboard-image.nvim",
+        opts = {},
+    },
 }

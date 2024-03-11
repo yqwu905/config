@@ -89,4 +89,15 @@ return {
             { "<leader>co", "<cmd>CalleeTree<cr>", desc = "callee tree" },
         },
     },
+
+    {
+        dir = "~/repos/session-term.nvim/",
+        dependencies = {
+            { "MunifTanjim/nui.nvim" },
+        },
+        opts = {},
+        keys = {
+            { "<leader>o", "<cmd>SessionTerm<cr>", desc = "session term" },
+        },
+    },
 }

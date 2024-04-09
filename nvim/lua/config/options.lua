@@ -28,3 +28,6 @@ vim.opt.foldlevel = 99
 vim.cmd("set noswapfile")
 vim.cmd("set nospell")
 vim.cmd("set title")
+vim.cmd("set colorcolumn=120")
+
+vim.g.neovide_input_ime = false

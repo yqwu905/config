@@ -17,6 +17,7 @@ return {
         keys = {
             { "<leader><space>", "<cmd>Telescope find_files<cr>", "find fiels" },
             { "<leader>slr", "<cmd>Telescope lsp_references<cr>", "find lsp references" },
+            { "<leader>gc", false },
         },
         opts = {
             defaults = {
@@ -34,6 +35,7 @@ return {
                         local action = require("telescope._extensions.project.actions")
                         local title = action.get_selected_title(prompt_bufner)
                         vim.o.titlestring = title
+                        vim.cmd("cd " .. action.get_selected_path(prompt_bufner))
                         action.search_in_project_files(prompt_bufner)
                     end,
                 },

@@ -23,6 +23,9 @@ return {
     -- Paste image
     {
         "yqwu905/clipboard-image.nvim",
-        opts = {},
+        opts = {
+            img_dir = "assets",
+            img_dir_txt = "assets",
+        },
     },
 }

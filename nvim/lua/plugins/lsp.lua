@@ -23,7 +23,6 @@ return {
             keys[#keys + 1] = { "gd", "<cmd>Glance definitions<cr>" }
             keys[#keys + 1] = { "gD", "<cmd>lua vim.lsp.buf.definition()<cr>" }
             keys[#keys + 1] = { "gh", "<cmd>Glance references<cr>" }
-            keys[#keys + 1] = { "ci", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>" }
         end,
         opts = {
             inlay_hints = {

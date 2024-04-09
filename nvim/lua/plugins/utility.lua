@@ -100,4 +100,18 @@ return {
             { "<leader>o", "<cmd>SessionTerm<cr>", desc = "session term" },
         },
     },
+    {
+        "letieu/jot.lua",
+        opts = {},
+        dependencies = { "nvim-lua/plenary.nvim" },
+        keys = {
+            {
+                "<leader>fj",
+                function()
+                    require("jot").toggle()
+                end,
+                desc = "project note",
+            },
+        },
+    },
 }

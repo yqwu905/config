@@ -2,8 +2,16 @@
 return {
     -- Git blame信息
     {
+        "FabijanZulj/blame.nvim",
+        opts = {},
+        keys = {
+            { "<leader>gb", "<cmd>ToggleBlame virtual<cr>", desc = "blame" },
+        },
+    },
+
+    {
         "f-person/git-blame.nvim",
-        event = { "BufReadPre", "BufNewFile" },
+        opts = {},
     },
 
     -- Diffview
@@ -16,7 +24,20 @@ return {
             { "<leader>gdh", "<cmd>DiffviewFileHistory<cr>", desc = "diffview history" },
             { "<leader>gdv", "<cmd>DiffviewOpen -uno<cr>", desc = "diffview" },
         },
-        opts = {},
+        opts = {
+            file_history_panel = {
+                log_options = {
+                    git = {
+                        single_file = {
+                            no_merges = true,
+                        },
+                        multi_file = {
+                            no_merges = true,
+                        },
+                    },
+                },
+            },
+        },
         lazy = true,
     },
 
@@ -27,30 +48,7 @@ return {
         cmd = { "Neogit" },
         keys = {
             { "<leader>gg", "<cmd>Neogit<cr>", desc = "neogit" },
-        },
-    },
-
-    -- Fugitive
-    {
-        "tpope/vim-fugitive",
-        keys = {
-            { "<leader>gb", "<cmd>G blame<cr>", desc = "Blame" },
-        },
-        cmd = {
-            "Git",
-            "G",
-            "Gstatus",
-            "Gedit",
-            "Gsplit",
-            "Gdiffsplit",
-            "Gread",
-            "Gwrite",
-            "Ggrep",
-            "GMove",
-            "GRename",
-            "GDelete",
-            "GRemove",
-            "GBrowse",
+            { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "commit" },
         },
     },
 }

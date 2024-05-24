@@ -62,15 +62,6 @@ return {
         },
     },
 
-    -- Bookmark plugin with ui
-    {
-        "otavioschwanck/arrow.nvim",
-        opts = {
-            show_icons = true,
-            leader_key = ";", -- Recommended to be a single key
-        },
-    },
-
     -- Doxgen
     {
         "vim-scripts/DoxygenToolkit.vim",
@@ -116,6 +107,7 @@ return {
     },
     {
         "kawre/leetcode.nvim",
+        cmd = { "Leet" },
         build = ":TSUpdate html",
         dependencies = {
             "nvim-telescope/telescope.nvim",

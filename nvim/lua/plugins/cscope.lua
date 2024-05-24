@@ -11,7 +11,7 @@ return {
         vim.api.nvim_create_user_command("CscopeBuild", function()
             pcall(function()
                 os.execute("fd -e c -e h -E output -E test > cscope.files")
-                vim.cmd("Cscope build")
+                vim.cmd("Cscope db build")
             end)
         end, {})
     end,

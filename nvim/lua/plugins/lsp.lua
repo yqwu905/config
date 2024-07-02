@@ -44,6 +44,7 @@ return {
                     },
                 },
                 bashls = {},
+                rust_analyzer = {},
             },
         },
     },

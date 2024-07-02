@@ -28,4 +28,20 @@ return {
             img_dir_txt = "assets",
         },
     },
+
+    -- Change surrounding
+    {
+        "echasnovski/mini.surround",
+        opts = {
+            mappings = {
+                add = "gsa",
+                delete = "gsd",
+                find = "gsf",
+                find_left = "gsF",
+                highlight = "gsh",
+                replace = "gsc",
+                update_n_lines = "gsn",
+            },
+        },
+    }
 }

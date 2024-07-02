@@ -7,8 +7,8 @@ return {
         opts = {},
         cmd = { "HiMyWordsToggle", "HiMyWordsClear" },
         keys = {
-            { "#", "<cmd>HiMyWordsToggle<cr>", desc = "Highlight word" },
-            { "<leader>um", "<cmd>HiMyWordsClear<cr>", desc = "Highlight word" },
+            { "#",          "<cmd>HiMyWordsToggle<cr>", desc = "Highlight word" },
+            { "<leader>um", "<cmd>HiMyWordsClear<cr>",  desc = "Highlight word" },
         },
     },
 
@@ -47,7 +47,7 @@ return {
     {
         "LunarVim/bigfile.nvim",
         opts = {
-            filesize = 2, -- size of the file in Mb
+            filesize = 2,      -- size of the file in Mb
             pattern = { "*" }, -- autocmd pattern
             features = {
                 "indent_blankline",
@@ -65,6 +65,7 @@ return {
     -- Doxgen
     {
         "vim-scripts/DoxygenToolkit.vim",
+        cmd = { "Dox" }
     },
 
     -- Calltree plugin base on cscope
@@ -73,7 +74,7 @@ return {
         dependencies = {
             { "MunifTanjim/nui.nvim" },
         },
-        dir = "~/repos/cscope-calltree.nvim",
+        -- dir = "~/repos/cscope-calltree.nvim",
         opts = {},
         keys = {
             { "<leader>ci", "<cmd>CallerTree<cr>", desc = "caller tree" },

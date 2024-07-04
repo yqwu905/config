@@ -25,4 +25,8 @@ return {
         "mvllow/modes.nvim",
         opts = {},
     },
+
+    {
+        "HiPhish/rainbow-delimiters.nvim"
+    }
 }

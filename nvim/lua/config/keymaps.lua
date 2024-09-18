@@ -19,6 +19,3 @@ end
 
 map({ "n" }, "<leader>rr", utils.async_run_code, { desc = "Run" })
 map({ "t" }, "<esc>", "<C-\\><C-n>", { desc = "Escape" })
-map({ "i" }, "<C-a>", "<home>", { desc = "Line start" })
-map({ "i" }, "<C-e>", "<end>", { desc = "Line end" })
-map({ "i" }, "<C-v>", "<C-r>+", { desc = "Paster" })

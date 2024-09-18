@@ -7,8 +7,8 @@ return {
         opts = {},
         cmd = { "HiMyWordsToggle", "HiMyWordsClear" },
         keys = {
-            { "#",          "<cmd>HiMyWordsToggle<cr>", desc = "Highlight word" },
-            { "<leader>um", "<cmd>HiMyWordsClear<cr>",  desc = "Highlight word" },
+            { "#", "<cmd>HiMyWordsToggle<cr>", desc = "Highlight word" },
+            { "<leader>um", "<cmd>HiMyWordsClear<cr>", desc = "Highlight word" },
         },
     },
 
@@ -47,7 +47,7 @@ return {
     {
         "LunarVim/bigfile.nvim",
         opts = {
-            filesize = 2,      -- size of the file in Mb
+            filesize = 2, -- size of the file in Mb
             pattern = { "*" }, -- autocmd pattern
             features = {
                 "indent_blankline",
@@ -65,7 +65,7 @@ return {
     -- Doxgen
     {
         "vim-scripts/DoxygenToolkit.vim",
-        cmd = { "Dox" }
+        cmd = { "Dox" },
     },
 
     -- Calltree plugin base on cscope
@@ -82,16 +82,6 @@ return {
         },
     },
 
-    {
-        dir = "~/repos/session-term.nvim/",
-        dependencies = {
-            { "MunifTanjim/nui.nvim" },
-        },
-        opts = {},
-        keys = {
-            { "<leader>o", "<cmd>SessionTerm<cr>", desc = "session term" },
-        },
-    },
     {
         "letieu/jot.lua",
         opts = {},
@@ -124,6 +114,24 @@ return {
             -- 配置放在这里
             cn = {
                 enabled = true,
+            },
+        },
+    },
+
+    {
+        "smoka7/multicursors.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "nvimtools/hydra.nvim",
+        },
+        opts = {},
+        cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
+        keys = {
+            {
+                mode = { "v", "n" },
+                "<Leader>m",
+                "<cmd>MCstart<cr>",
+                desc = "Create a selection for selected text or word under the cursor",
             },
         },
     },

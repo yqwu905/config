@@ -5,16 +5,19 @@ return {
         build = function()
             vim.fn["mkdp#util#install"]()
         end,
-        -- config = function()
-        --     vim.g.mkdp_theme = "light"
-        -- end,
+        config = function()
+            vim.g.mkdp_theme = "light"
+        end,
         ft = { "markdown" },
         cmds = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
     },
 
-    -- Json增强
     {
-        "gennaro-tedesco/nvim-jqx",
-        ft = { "json", "yaml" },
+        "OXY2DEV/markview.nvim",
+        enabled = false,
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        },
     },
 }

@@ -1,0 +1,14 @@
+.vscode/
+.idea
+*.o
+*.exe
+build/
+deps/
+cscope.*
+.nvim/
+output/
+compile_commands.json
+.cache/
+local/
+Makefile
+readline-8.2/*

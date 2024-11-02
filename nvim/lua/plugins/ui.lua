@@ -13,6 +13,7 @@ return {
     { "EdenEast/nightfox.nvim" },
     { "Mofiqul/vscode.nvim" },
     { "folke/tokyonight.nvim", lazy = false },
+    { "eldritch-theme/eldritch.nvim", lazy = false, priority = 1000, opts = {} },
     { -- set colorscheme
         "LazyVim/LazyVim",
         opts = {
@@ -27,6 +28,6 @@ return {
     },
 
     {
-        "HiPhish/rainbow-delimiters.nvim"
-    }
+        "HiPhish/rainbow-delimiters.nvim",
+    },
 }

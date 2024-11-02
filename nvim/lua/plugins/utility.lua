@@ -74,11 +74,10 @@ return {
         dependencies = {
             { "MunifTanjim/nui.nvim" },
         },
-        -- dir = "~/repos/cscope-calltree.nvim",
         opts = {},
         keys = {
-            { "<leader>ci", "<cmd>CallerTree<cr>", desc = "caller tree" },
-            { "<leader>co", "<cmd>CalleeTree<cr>", desc = "callee tree" },
+            { "<leader>cti", "<cmd>CallerTree<cr>", desc = "caller tree" },
+            { "<leader>cto", "<cmd>CalleeTree<cr>", desc = "callee tree" },
         },
     },
 
@@ -112,6 +111,7 @@ return {
         },
         opts = {
             -- 配置放在这里
+            lang = "rust",
             cn = {
                 enabled = true,
             },

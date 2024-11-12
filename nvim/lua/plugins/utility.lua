@@ -27,25 +27,6 @@ return {
         opts = {},
     },
 
-    -- 大文件禁用部分影响性能插件
-    {
-        "LunarVim/bigfile.nvim",
-        opts = {
-            filesize = 2, -- size of the file in Mb
-            pattern = { "*" }, -- autocmd pattern
-            features = {
-                "indent_blankline",
-                "illuminate",
-                "lsp",
-                "treesitter",
-                "syntax",
-                "matchparen",
-                "vimopts",
-                "filetype",
-            },
-        },
-    },
-
     -- Doxgen
     {
         "vim-scripts/DoxygenToolkit.vim",
@@ -88,10 +69,6 @@ return {
             "nvim-lua/plenary.nvim", -- telescope 所需
             "MunifTanjim/nui.nvim",
 
-            -- 可选
-            "nvim-treesitter/nvim-treesitter",
-            "rcarriga/nvim-notify",
-            "nvim-tree/nvim-web-devicons",
         },
         opts = {
             -- 配置放在这里

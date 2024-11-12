@@ -1,8 +1,6 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-local utils = require("config.utils")
-
 local function map(mode, lhs, rhs, opts)
     local keys = require("lazy.core.handler").handlers.keys
     ---@cast keys LazyKeysHandler
@@ -17,5 +15,4 @@ local function map(mode, lhs, rhs, opts)
     end
 end
 
-map({ "n" }, "<leader>rr", utils.async_run_code, { desc = "Run" })
 map({ "t" }, "<esc>", "<C-\\><C-n>", { desc = "Escape" })

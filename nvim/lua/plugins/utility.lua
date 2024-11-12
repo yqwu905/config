@@ -27,22 +27,6 @@ return {
         opts = {},
     },
 
-    -- Terminal
-    {
-        "akinsho/toggleterm.nvim",
-        cmd = { "ToggleTerm" },
-        opts = {},
-        keys = {
-            { "<A-h>", "<cmd>ToggleTerm<cr>", desc = "toggle term" },
-        },
-        config = function(_, opts)
-            if vim.fn.has("linux") then
-                vim.opt.shell = "zsh"
-            end
-            require("toggleterm").setup(opts)
-        end,
-    },
-
     -- 大文件禁用部分影响性能插件
     {
         "LunarVim/bigfile.nvim",

@@ -20,15 +20,6 @@ return {
         end,
     },
 
-    -- Paste image
-    {
-        "yqwu905/clipboard-image.nvim",
-        opts = {
-            img_dir = "assets",
-            img_dir_txt = "assets",
-        },
-    },
-
     -- Change surrounding
     {
         "echasnovski/mini.surround",

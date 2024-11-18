@@ -4,9 +4,7 @@ return {
     {
         "FabijanZulj/blame.nvim",
         opts = {},
-        keys = {
-            { "<leader>gb", "<cmd>BlameToggle virtual<cr>", desc = "blame" },
-        },
+        cmd = { "BlameToggle" },
     },
 
     {
@@ -19,10 +17,10 @@ return {
         "sindrets/diffview.nvim",
         cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory", "DiffviewRefresh" },
         keys = {
-            { "<leader>gdc", "<cmd>DiffviewClose<cr>",         desc = "diffview close" },
+            { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "diffview close" },
             { "<leader>gdf", "<cmd>DiffviewFileHistory %<cr>", desc = "diffview current file" },
-            { "<leader>gdh", "<cmd>DiffviewFileHistory<cr>",   desc = "diffview history" },
-            { "<leader>gdv", "<cmd>DiffviewOpen -uno<cr>",     desc = "diffview" },
+            { "<leader>gdh", "<cmd>DiffviewFileHistory<cr>", desc = "diffview history" },
+            { "<leader>gdv", "<cmd>DiffviewOpen -uno<cr>", desc = "diffview" },
         },
         opts = {
             file_history_panel = {
@@ -39,16 +37,5 @@ return {
             },
         },
         lazy = true,
-    },
-
-    -- Neogit, 替代LazyGit
-    {
-        "NeogitOrg/neogit",
-        opts = {},
-        cmd = { "Neogit" },
-        keys = {
-            { "<leader>gg", "<cmd>Neogit<cr>",        desc = "neogit" },
-            { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "commit" },
-        },
     },
 }

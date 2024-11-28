@@ -2,11 +2,6 @@
 
 return {
     {
-        "williamboman/mason.nvim",
-        enabled = false,
-    },
-
-    {
         "nvim-treesitter/nvim-treesitter",
         opts = {
             incremental_selection = {

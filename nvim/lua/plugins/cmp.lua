@@ -1,20 +1,20 @@
 return {
-    {
-        "Saghen/blink.cmp",
-        lazy = false,
-        dependencies = "rafamadriz/friendly-snippets",
-        version = "v0.*",
-        ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
-        opts = {
-            keymap = { preset = "enter" },
-
-            highlight = {
-                use_nvim_cmp_as_default = true,
-            },
-            nerd_font_variant = "mono",
-        },
-    },
+    -- {
+    --     "Saghen/blink.cmp",
+    --     lazy = false,
+    --     dependencies = "rafamadriz/friendly-snippets",
+    --     version = "v0.*",
+    --     ---@module 'blink.cmp'
+    --     ---@type blink.cmp.Config
+    --     opts = {
+    --         keymap = { preset = "enter" },
+    --
+    --         highlight = {
+    --             use_nvim_cmp_as_default = true,
+    --         },
+    --         nerd_font_variant = "mono",
+    --     },
+    -- },
     {
         "hrsh7th/nvim-cmp",
         enabled = false,

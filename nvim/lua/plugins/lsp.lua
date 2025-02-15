@@ -28,6 +28,23 @@ return {
             inlay_hints = {
                 enabled = true,
             },
+            servers = {
+                clangd = {
+                    -- single_file_support = false,
+                    root_dir = require("lspconfig.util").root_pattern("compile_commands.json", ".clangd"),
+                    cmd = {
+                        "clangd",
+                        "--background-index",
+                        "--clang-tidy",
+                        "--header-insertion=iwyu",
+                        "--completion-style=detailed",
+                        "--function-arg-placeholders",
+                        "--fallback-style=llvm",
+                        "--header-insertion=never",
+                    },
+                },
+                bashls = {},
+            },
         },
     },
     {

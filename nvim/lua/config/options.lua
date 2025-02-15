@@ -17,3 +17,5 @@ vim.g.neovide_input_ime = false
 vim.cmd("set termencoding=utf-8")
 vim.cmd("set encoding=utf8")
 vim.cmd("set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030")
+
+vim.g.snacks_animate = false

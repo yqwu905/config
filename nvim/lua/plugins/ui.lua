@@ -1,10 +1,4 @@
 return {
-    { -- catppuccin colorscheme
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        lazy = false,
-    },
     { "EdenEast/nightfox.nvim" },
     { "Mofiqul/vscode.nvim" },
     { "folke/tokyonight.nvim", lazy = false },

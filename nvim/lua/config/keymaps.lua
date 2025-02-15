@@ -16,3 +16,4 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map({ "t" }, "<esc>", "<C-\\><C-n>", { desc = "Escape" })
+map({ "n" }, "<leader>qq", "<cmd>wqa<cr>", { desc = "quit" })

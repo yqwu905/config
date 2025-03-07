@@ -2,10 +2,12 @@ return {
     { "EdenEast/nightfox.nvim" },
     { "Mofiqul/vscode.nvim" },
     { "folke/tokyonight.nvim", lazy = false },
+    { "sainnhe/gruvbox-material", lazy = false },
+    { "rebelot/kanagawa.nvim", lazy = false },
     { -- set colorscheme
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "tokyonight",
+            colorscheme = "gruvbox-material",
         },
     },
 

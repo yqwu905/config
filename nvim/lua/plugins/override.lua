@@ -16,4 +16,23 @@ return {
             enable = true,
         },
     },
+
+    {
+        "ahmedkhalf/project.nvim",
+        opts = {
+            manual_mode = false,
+            detection_methods = { "lsp", "pattern" },
+            patterns = {
+                ".git",
+                ".mm",
+            },
+        },
+    },
+
+    {
+        "ibhagwan/fzf-lua",
+        opts = {
+            { "default", winopts = { preview = { default = "bat" } } },
+        },
+    },
 }

@@ -5,14 +5,14 @@
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.background = "light"
+-- vim.opt.background = "light"
 
 vim.cmd("set noswapfile")
 vim.cmd("set nospell")
 vim.cmd("set title")
 vim.cmd("set colorcolumn=120")
 
-vim.g.neovide_input_ime = false
+vim.g.neovide_input_ime = true
 
 vim.cmd("set termencoding=utf-8")
 vim.cmd("set encoding=utf8")

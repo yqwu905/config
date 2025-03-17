@@ -20,9 +20,9 @@ return {
         "neovim/nvim-lspconfig",
         init = function()
             local keys = require("lazyvim.plugins.lsp.keymaps").get()
-            keys[#keys + 1] = { "gd", "<cmd>Lspsaga peek_definition<cr>" }
-            keys[#keys + 1] = { "gD", "<cmd>Lspsaga goto_definition<cr>" }
-            keys[#keys + 1] = { "gh", "<cmd>Lspsaga finder<cr>" }
+            keys[#keys + 1] = { "gd", "<cmd>Glance definition<cr>" }
+            keys[#keys + 1] = { "gt", "<cmd>Glance type_definitions<cr>" }
+            keys[#keys + 1] = { "gh", "<cmd>Glance references<cr>" }
             keys[#keys + 1] = { "<leader>ci", "<cmd>FzfLua lsp_incoming_calls<cr>" }
             keys[#keys + 1] = { "<leader>co", "<cmd>FzfLua lsp_outgoing_calls<cr>" }
         end,
@@ -56,19 +56,5 @@ return {
                 inline = true,
             },
         },
-    },
-    {
-        "nvimdev/lspsaga.nvim",
-        config = function()
-            require("lspsaga").setup({})
-        end,
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter", -- optional
-            "nvim-tree/nvim-web-devicons", -- optional
-        },
-        keys = {
-            { "gh", "<cmd>Lspsaga finder<cr>", desc = "finder" },
-        },
-        cmd = { "Lspsaga" },
     },
 }

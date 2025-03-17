@@ -1,15 +1,14 @@
 return {
     {
         "yetone/avante.nvim",
-        event = "VeryLazy",
-        lazy = false,
+        cmd = { "AvanteAsk", "AvanteAsk" },
         version = false,
         opts = {
             provider = "openai",
             auto_suggestions_provider = "openai",
             openai = {
                 endpoint = "http://api.openai.rnd.huawei.com/v1",
-                model = "qwen2.5-coder-7b-instruct",
+                model = "qwq-32b",
                 timeout = 30000, -- Timeout in milliseconds
                 temperature = 0,
                 max_tokens = 4096,

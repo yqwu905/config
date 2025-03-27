@@ -1,4 +1,9 @@
 -- 更改LazyVim插件的配置
+function _ADD_CURR_DIR_TO_PROJECTS()
+    local historyfile = require("project_nvim.utils.path").historyfile
+    local curr_directory = vim.fn.expand("%:p:h")
+    vim.cmd("!echo " .. curr_directory .. " >> " .. historyfile)
+end
 
 return {
     {
@@ -21,12 +26,11 @@ return {
         "ahmedkhalf/project.nvim",
         opts = {
             manual_mode = true,
-            detection_methods = { "lsp", "pattern" },
-            patterns = {
-                ".git",
-                ".mm",
-            },
         },
+        config = function(opts)
+            require("project_nvim").setup(opts)
+            vim.cmd("command! ProjectAddMuanually lua _ADD_CURR_DIR_TO_PROJECTS()")
+        end,
     },
 
     {

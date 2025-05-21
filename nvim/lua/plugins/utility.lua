@@ -133,4 +133,12 @@ return {
             end, NS)
         end,
     },
+
+    {
+        "HakonHarnes/img-clip.nvim",
+        keys = { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+        cmd = { "PasteImage" },
+    },
+
+    { "tiagovla/scope.nvim", config = true },
 }

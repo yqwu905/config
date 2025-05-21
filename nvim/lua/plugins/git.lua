@@ -50,6 +50,9 @@ return {
             "ibhagwan/fzf-lua", -- optional
             "echasnovski/mini.pick", -- optional
         },
+        opts = {
+            disable_signs = true,
+        },
         keys = { { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit" } },
     },
 }

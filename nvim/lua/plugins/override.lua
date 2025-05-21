@@ -23,20 +23,31 @@ return {
     },
 
     {
-        "ahmedkhalf/project.nvim",
-        opts = {
-            manual_mode = true,
-        },
-        config = function(opts)
-            require("project_nvim").setup(opts)
-            vim.cmd("command! ProjectAddMuanually lua _ADD_CURR_DIR_TO_PROJECTS()")
-        end,
-    },
-
-    {
         "ibhagwan/fzf-lua",
         opts = {
             { "default", winopts = { preview = { default = "bat" } } },
+        },
+    },
+
+    {
+        "akinsho/bufferline.nvim",
+    },
+
+    { "mason-org/mason.nvim", version = "^1.0.0" },
+    { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
+
+    {
+        "akinsho/bufferline.nvim",
+
+        opts = {
+            options = {
+                diagnostics = false,
+                show_buffer_close_icons = false,
+                show_close_icon = false,
+                separator_style = "thin",
+                tab_size = 8,
+                always_show_bufferline = true,
+            },
         },
     },
 }

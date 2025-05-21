@@ -32,7 +32,7 @@ return {
             },
             servers = {
                 clangd = {
-                    -- single_file_support = false,
+                    single_file_support = false,
                     root_dir = require("lspconfig.util").root_pattern("compile_commands.json", ".clangd"),
                     cmd = {
                         "clangd",

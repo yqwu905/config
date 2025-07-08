@@ -141,4 +141,6 @@ return {
     },
 
     { "tiagovla/scope.nvim", config = true },
+
+    { "session.nvim", dir = "~/repos/session.nvim/", opts = {} },
 }

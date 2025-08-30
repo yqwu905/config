@@ -1,9 +1,9 @@
 return {
     "dhananjaylatkar/cscope_maps.nvim",
     dependencies = {
-        "folke/which-key.nvim",          -- optional [for whichkey hints]
-        "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
-        "nvim-tree/nvim-web-devicons",   -- optional [for devicons in telescope or fzf]
+        "folke/which-key.nvim", -- optional [for whichkey hints]
+        "ibhagwan/fzf-lua",
+        "nvim-tree/nvim-web-devicons", -- optional [for devicons in telescope or fzf]
     },
     keys = { "<C-c>" },
     cmd = { "Cscope" },
@@ -17,10 +17,10 @@ return {
     end,
     opts = {
         disable_maps = false,
-        skip_input_prompt = false, -- "true" doesn't ask for input
-        prefix = "<C-c>",          -- prefix to trigger maps
+        skip_input_prompt = true, -- "true" doesn't ask for input
+        prefix = "<C-c>", -- prefix to trigger maps
         cscope = {
-            picker = "telescope",
+            picker = "fzf-lua",
         },
     },
 }

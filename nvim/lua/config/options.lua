@@ -13,7 +13,7 @@ vim.cmd("set nospell")
 vim.cmd("set title")
 vim.cmd("set colorcolumn=120")
 
-vim.g.neovide_input_ime = true
+vim.g.neovide_input_ime = false
 
 vim.cmd("set encoding=utf8")
 vim.cmd("set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030")

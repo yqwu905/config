@@ -20,6 +20,9 @@ return {
         autotag = {
             enable = true,
         },
+        dependencies = {
+            "OXY2DEV/markview.nvim",
+        },
     },
 
     {

@@ -20,9 +20,6 @@ return {
         autotag = {
             enable = true,
         },
-        dependencies = {
-            "OXY2DEV/markview.nvim",
-        },
     },
 
     {
@@ -36,8 +33,8 @@ return {
         "akinsho/bufferline.nvim",
     },
 
-    { "mason-org/mason.nvim", version = "^1.0.0" },
-    { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
+    -- { "mason-org/mason.nvim", version = "^1.0.0" },
+    -- { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 
     {
         "akinsho/bufferline.nvim",

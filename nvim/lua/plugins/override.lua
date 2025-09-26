@@ -37,6 +37,11 @@ return {
     -- { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 
     {
+        "mfussenegger/nvim-dap",
+        enabled = false,
+    },
+
+    {
         "akinsho/bufferline.nvim",
 
         opts = {

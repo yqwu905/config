@@ -17,7 +17,6 @@ return {
     end,
     opts = {
         disable_maps = false,
-        skip_input_prompt = true, -- "true" doesn't ask for input
         prefix = "<C-c>", -- prefix to trigger maps
         cscope = {
             picker = "fzf-lua",
